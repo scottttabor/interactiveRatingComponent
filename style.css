@@ -1,0 +1,22 @@
+
+
+
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Variables */
+
+:root {
+    --mainBG: #131518;
+    --secondaryTextColor: #969FAD;
+    --ratingBG: #7C8798;
+    --mainBtn: #FC7614;
+    --leadTextColor: #FFFFFF;
+
+}
+
