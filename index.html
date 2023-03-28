@@ -5,18 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Rating | How did we do?</title>
 </head>
 <body>
    
 <main>
-    <div class="contentContainer">
-        <section class="productCard">
-            <div class="productImg">
-                <img src="." alt="">
+   <div class="contentContainer">
+    <div class="ratingCard">
+        <div class="cardContainer">
+            <img src="./images/icon-star.svg" alt="A star, give us a rating below!">
+            <h1>How did we do?</h1>
+            <p class="supportText">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
+            <div class="ratingCircles">
+                <p class="grabber circle" id="one">1</p>
+                <p class="grabber circle" id="two">2</p>
+                <p class="grabber circle" id="three">3</p>
+                <p class="grabber circle" id="four">4</p>
+                <p class='grabber circle' id="five">5</p>
             </div>
-        </section>
+            <button><span class="uppercase">Submit</span></button>
+        </div>
     </div>
+
+
+    <!-- State change -> Thank you card -->
+    <div class="ratingCard displayOff">
+        <div class="cardContainer thankYouCard">
+            <img class="thankYouImage" src="./images/illustration-thank-you.svg" alt="Image of a debit card and phone transaction">
+            <div class="selectionRelay">
+                <p>You Selected 4 out of 5</p>
+            </div>
+            <h1>Thank You!</h1>
+            <p>We appreciate you taking the time to give a rating. If you ever need support, don't hesitate to get in touch.</p>
+        </div>
+    </div>
+   </div>
 </main>
 
 

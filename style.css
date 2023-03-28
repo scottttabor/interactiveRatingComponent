@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
 
 
 /* CSS Reset */
@@ -6,7 +6,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-size: 14px;
+    font-size: 15px;
+    font-family: 'Overpass', sans-serif;
 }
 
 /* Variables */
@@ -14,9 +15,174 @@
 :root {
     --mainBG: #131518;
     --secondaryTextColor: #969FAD;
-    --ratingBG: #7C8798;
+    --ratingBG: #262E38;
     --mainBtn: #FC7614;
     --leadTextColor: #FFFFFF;
 
 }
 
+main {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--mainBG);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentContainer {
+   max-width: 1440px;
+   height: 100%;
+   display: flex;
+   justify-content: center; 
+   align-items: center;
+}
+
+.ratingCard {
+    background: rgb(35,42,52);
+    background: radial-gradient(circle, rgba(35,42,52,1) 0%, rgba(24,30,39,1) 100%);
+    max-width: 327px;
+    max-height: 440px;
+    border-radius: 25px;
+}
+
+.cardContainer {
+    padding: 1.8rem;
+}
+
+.cardContainer img {
+    background-color: var(--ratingBG);
+    padding: 1rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.cardContainer h1 {
+    color: var(--leadTextColor);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.cardContainer .supportText {
+    color: var(--secondaryTextColor);
+    line-height: 1.4rem;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cardContainer .ratingCircles {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    
+}
+
+.circle {
+    background-color: var(--ratingBG);
+    color: var(--secondaryTextColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    transition: background-color, color, .5s;
+    cursor: pointer;
+    
+    
+}
+
+.circle:hover {
+    cursor: pointer;
+    background-color: var(--mainBtn);
+    color: var(--leadTextColor);
+    transition: background-color, color, .5s;
+}
+
+.clickedRating {
+    background-color: #969FAD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    color: var(--leadTextColor);
+    cursor: pointer;
+}
+
+
+
+
+
+.cardContainer button {
+    width: 100%;
+    background-color: var(--mainBtn);
+    color: var(--leadTextColor);
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 0;
+    margin-bottom: .7rem;
+    transition: background-color, color, .5s;
+}
+
+.cardContainer button:hover {
+    background-color: var(--leadTextColor);
+    color: var(--mainBtn);
+    cursor: pointer;
+}
+
+.cardContainer button .uppercase {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .2rem;
+}
+
+
+/* Grabs HTML collection by this class so other classes can be changed/toggled */
+.grabber {
+    font-weight: 400;
+}
+
+.displayOff {
+    display: none;
+}
+
+/* Thank you card Styling */
+
+.cardContainer .thankYouImage {
+    background-color: transparent;
+    border-radius: 0;
+    margin: auto;
+    
+}
+
+.thankYouCard {
+    text-align: center;
+    
+}
+
+
+@media screen and (min-width: 414px) {
+    .ratingCard {
+        max-width: 412px;
+        max-height: 416px;
+    }
+
+    .cardContainer img {
+        margin-bottom: 2rem;
+    }
+
+    .cardContainer .ratingCircles {
+        margin-bottom: 2.2rem;
+    }
+
+    .circle {
+        height: 51px;
+        width: 51px;
+    }
+
+    .cardContainer .supportText {
+        margin-bottom: 1.6rem;
+    }
+}
