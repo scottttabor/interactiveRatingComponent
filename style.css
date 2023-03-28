@@ -70,14 +70,14 @@ main {
     margin-bottom: 1rem;
 }
 
-.cardContainer .ratingCircles {
+.cardContainer form .ratingCircles {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
     
 }
 
-.circle {
+form .circle {
     background-color: var(--ratingBG);
     color: var(--secondaryTextColor);
     display: flex;
@@ -86,20 +86,21 @@ main {
     width: 42px;
     height: 42px;
     border-radius: 50%;
+    border: none;
     transition: background-color, color, .5s;
     cursor: pointer;
     
     
 }
 
-.circle:hover {
+form .circle:hover {
     cursor: pointer;
     background-color: var(--mainBtn);
     color: var(--leadTextColor);
     transition: background-color, color, .5s;
 }
 
-.clickedRating {
+form .clickedRating {
     background-color: #969FAD;
     display: flex;
     justify-content: center;
@@ -115,7 +116,7 @@ main {
 
 
 
-.cardContainer button {
+.cardContainer .btnSubmit {
     width: 100%;
     background-color: var(--mainBtn);
     color: var(--leadTextColor);
@@ -126,7 +127,7 @@ main {
     transition: background-color, color, .5s;
 }
 
-.cardContainer button:hover {
+.cardContainer .btnSubmit:hover {
     background-color: var(--leadTextColor);
     color: var(--mainBtn);
     cursor: pointer;
@@ -154,12 +155,41 @@ main {
     background-color: transparent;
     border-radius: 0;
     margin: auto;
+    margin-bottom: 1rem;
     
 }
 
 .thankYouCard {
     text-align: center;
     
+}
+
+.selectionRelay {
+    color: var(--mainBtn);
+    width: 55%;
+    margin: auto;
+    margin-bottom: 2.5rem;
+}
+
+.selectionRelay #ratingSelected {
+    color: var(--mainBtn);
+    background-color: var(--ratingBG);
+    padding: .4rem;
+    border-radius: 30px;
+    
+    
+}
+
+.thankYouCard h1 {
+    font-size: 1.8rem;
+}
+
+.thankYouCard p {
+    color: var(--secondaryTextColor);
+    width: 93.8%;
+    line-height: 1.6rem;
+    margin: auto;
+    margin-bottom: 2rem;
 }
 
 
@@ -177,7 +207,7 @@ main {
         margin-bottom: 2.2rem;
     }
 
-    .circle {
+    form .circle {
         height: 51px;
         width: 51px;
     }

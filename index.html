@@ -11,29 +11,32 @@
    
 <main>
    <div class="contentContainer">
-    <div class="ratingCard">
+    <div class="ratingCard" id="ratingCardEntry">
         <div class="cardContainer">
             <img src="./images/icon-star.svg" alt="A star, give us a rating below!">
             <h1>How did we do?</h1>
             <p class="supportText">Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
-            <div class="ratingCircles">
-                <p class="grabber circle" id="one">1</p>
-                <p class="grabber circle" id="two">2</p>
-                <p class="grabber circle" id="three">3</p>
-                <p class="grabber circle" id="four">4</p>
-                <p class='grabber circle' id="five">5</p>
-            </div>
-            <button><span class="uppercase">Submit</span></button>
+            <form action="/" method="post">
+                <div class="ratingCircles">
+                    <button type="button" name="rating" value="one" class="grabber circle" id="one">1</p>
+                    <button type="button" name="rating" value="two" class="grabber circle" id="two">2</p>
+                    <button type="button" name="rating" value="three" class="grabber circle" id="three">3</p>
+                    <button type="button" name="rating" value="four" class="grabber circle" id="four">4</p>
+                    <button type="button" name="rating" value="five" class='grabber circle' id="five">5</p>
+                </div>
+                <button class="btnSubmit" type="button" id="submitFormBtn"><span class="uppercase">Submit</span></button>
+
+            </form>
         </div>
     </div>
 
 
     <!-- State change -> Thank you card -->
-    <div class="ratingCard displayOff">
+    <div class="ratingCard displayOff" id="postRatingCard">
         <div class="cardContainer thankYouCard">
             <img class="thankYouImage" src="./images/illustration-thank-you.svg" alt="Image of a debit card and phone transaction">
             <div class="selectionRelay">
-                <p>You Selected 4 out of 5</p>
+                <p id="ratingSelected">You selected 4 out of 5</p>
             </div>
             <h1>Thank You!</h1>
             <p>We appreciate you taking the time to give a rating. If you ever need support, don't hesitate to get in touch.</p>
